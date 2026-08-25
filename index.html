@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#efb2c4" />
+    <title>Chá de bebê da Ayla</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="imagens/favicon.png" />
+  </head>
+
+  <body>
+    <div id="visualizacao" class="esqueleto-site">
+      <header class="barra-topo">
+        <p id="nome">AYLA</p>
+         <nav class="menu-topo">
+    <a href="#inicio">Início</a>
+    <a href="#recadinhos">Recadinhos</a>
+  </nav>
+        <button class="acesso" data-action="abrir-login">
+           🔒 Área do anfitrião
+        </button>
+      </header>
+
+      <main>
+        <!-- SEÇÃO PRINCIPAL -->
+        <section class="seção-principal">
+          <div class="texto-destaque">
+            <span class="texto-apoio">✦ uma celebração está chegando</span>
+
+            <h1>Chá de bebê <em>da Ayla</em></h1>
+
+            <p class="texto-introducao">
+              Um cantinho para celebrar a chegada da nossa pequena. Se quiser,
+              escolha um presente ou deixe um carinho em forma de contribuição.
+            </p>
+
+            <div class="texto-acoes">
+              <a href="#presentes" class="botao botao-principal"> Ver lista de presentes <span>→</span></a>
+
+              <a href="#contribuir" class="link-texto"> Contribuição livre </a>
+            </div>
+          </div>
+
+          <div class="arte-destaque">
+            <img
+              src="imagens/cha-bebe-ilustracao-recorte.png"
+              alt="Ilustração de um ursinho entre flores" />
+
+            <div class="selo">
+              <img
+                src="imagens/cha-bebe-selo-recorte.png"
+                alt="Selo do chá de bebê" />
+            </div>
+          </div>
+        </section>
+
+        <!-- LISTA DE PRESENTES -->
+        <div class="conteudo">
+          <section
+            class="cartao-papel secao-presentes papel-deslocado"
+            id="presentes"
+          >
+            <img
+              class="selo-secao"
+              src="imagens/cha-bebe-selo-recorte.png"
+              alt=""
+            />
+
+            <div class="secao-titulo">
+              <div>
+                <span class="rotulo">cartão de presentes</span>
+
+                <h2>Um carinho de cada vez</h2>
+              </div>
+
+              <span class="contador" id="contador-presentes"></span>
+            </div>
+
+            <div class="lista-presentes" id="lista-presentes"></div>
+          </section>
+
+          <!-- CONTRIBUIÇÃO -->
+          <section
+            class="cartao-papel cartao-contribuicao papel-deslocado-alternativo"
+            id="contribuir"
+          >
+            <img
+              class="selo-secao selo-direita"
+              src="imagens/cha-bebe-selo-recorte.png"
+              alt=""
+            />
+
+            <div class="introducao-contribuicao">
+              <span class="rotulo">contribuição livre</span>
+
+              <h2>Faça parte desse momento</h2>
+
+              <p>
+                Qualquer valor ajuda a completar o cantinho da Ayla. Deixe
+                também uma palavrinha para ela guardar quando crescer.
+              </p>
+            </div>
+
+            <form class="formulario-contribuicao" id="formulario-contribuicao">
+              <div class="linha-formulario">
+                <label>
+                  <span>seu nome</span>
+
+                  <input
+                    name="name"
+                    required
+                    placeholder="Como podemos te chamar?"
+                  />
+                </label>
+
+                <label class="campo-valor">
+                  <span>valor (R$)</span>
+
+                  <input
+                    name="value"
+                    type="number"
+                    min="1"
+                    required
+                    placeholder="0,00"
+                  />
+                </label>
+              </div>
+
+              <label>
+                <span>
+                  mensagem para o bebê
+                  <small>(opcional)</small>
+                </span>
+
+                <textarea
+                  name="message"
+                  placeholder="Escreva um recadinho..."
+                  rows="3"
+                ></textarea>
+              </label>
+
+              <button class="botao botao-principal" type="submit">
+                Contribuir ✦
+              </button>
+            </form>
+          </section>
+
+          <!-- RODAPÉ -->
+          <footer class="rodape">
+            <span>feito com carinho para a Ayla</span>
+
+            <button data-action="abrir-login">🔒 acesso do anfitrião</button>
+
+            <button data-action="copiar-link">⌯ compartilhar convite</button>
+          </footer>
+        </div>
+      </main>
+    </div>
+
+    <!-- ÁREA DO ANFITRIÃO -->
+    <div id="visualizacao-anfitriao" class="estrutura-anfitriao oculto">
+      <aside class="barra-lateral-anfitriao">
+        <button class="marca marca-anfitriao" data-action="publico">
+          <img src="imagens/cha-bebe-logo-recorte.png" alt="" />
+
+          <span>chá de bebê</span>
+        </button>
+
+        <div class="perfil-anfitriao">
+          <div class="avatar">AC</div>
+
+          <div>
+            <strong>Ana & Caio</strong>
+            <span>anfitriões</span>
+          </div>
+        </div>
+
+        <nav>
+          <a class="ativo"> ▦ visão geral </a>
+
+          <a data-action="adicionar-presente">
+            🎁 presentes
+            <b id="quantidade-presentes-anfitriao"></b>
+          </a>
+
+          <a> ♧ convidados </a>
+        </nav>
+
+        <button class="voltar-publico" data-action="publico">
+          ← ver convite público
+        </button>
+      </aside>
+
+      <!-- CONTEÚDO PRINCIPAL DO ANFITRIÃO -->
+      <section class="principal-anfitriao">
+        <header class="cabecalho-anfitriao">
+          <div>
+            <span class="rotulo"> painel de organização </span>
+
+            <h1>Área do anfitrião</h1>
+
+            <p>Deixe tudo pronto para celebrar a chegada da Ayla.</p>
+          </div>
+
+          <button class="botao botao-secundario" data-action="copiar-link">
+            ⌯ compartilhar convite
+          </button>
+        </header>
+
+        <!-- ESTATÍSTICAS -->
+        <div class="grade-estatisticas">
+          <div class="cartao-estatistica">
+            <span>presentes cadastrados</span>
+
+            <strong id="total-estatistica">0</strong>
+
+            <small>🎁 itens na lista</small>
+          </div>
+
+          <div class="cartao-estatistica">
+            <span>já reservados</span>
+
+            <strong id="reservados-estatistica">0</strong>
+
+            <small id="progresso-estatistica"> 0% da lista </small>
+          </div>
+
+          <div class="cartao-estatistica">
+            <span>valor estimado</span>
+
+            <strong id="valor-estatistica"> R$ 0,00 </strong>
+
+            <small> baseado na lista atual </small>
+          </div>
+        </div>
+
+        <!-- PAINEL DE PRESENTES -->
+        <section class="painel-anfitriao">
+          <div class="titulo-painel">
+            <div>
+              <span class="rotulo"> lista de presentes · com carinho </span>
+
+              <h2>Organize os itens do enxoval</h2>
+            </div>
+
+            <button
+              class="botao botao-principal"
+              data-action="adicionar-presente"
+            >
+              ＋ adicionar presente
+            </button>
+          </div>
+
+          <div class="tabela-anfitriao">
+            <div class="cabecalho-tabela">
+              <span>presente</span>
+
+              <span>categoria</span>
+
+              <span>valor</span>
+
+              <span>status</span>
+
+              <span></span>
+            </div>
+
+            <div id="lista-presentes-anfitriao"></div>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <!-- JANELA MODAL -->
+    <div id="modal" class="fundo-modal oculto">
+      <div class="modal cartao-papel">
+        <button class="fechar-modal" data-action="fechar-modal">×</button>
+
+        <div id="conteudo-modal"></div>
+      </div>
+    </div>
+
+    <!-- NOTIFICAÇÃO -->
+    <div id="aviso" class="aviso"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

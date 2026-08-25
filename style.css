@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #543d3a;
+  background: #efb2c4;
+
+  --tinta: #543d3a;
+  --suave: #8e7474;
+  --rosa: #efb2c4;
+  --papel: #fffaf7;
+  --terracota: #a95f57;
+  --linha: rgba(169, 95, 87, 0.18);
+  --sombra: 0 18px 48px rgba(116, 61, 73, 0.12);
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--rosa);
+  color: var(--tinta);
+  overflow-x: hidden;
+}
+
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+button,
+a {
+  cursor: pointer;
+}
+
+
+/* usada no javascript */
+
+.oculto {
+  display: none !important;
+  /* Esconde o elemento da página e impede que outras regras o exibam */
+}
+
+
+.esqueleto-site {
+  min-height: 100vh;
+  background: var(--rosa) url('imagens/fundo\ bebê.jpg');
+  padding: 20px 28px 36px;
+}
+
+
+.barra-topo {
+  width: 100%;
+  max-width: 1295px;
+  height: 72px;
+
+  margin: 0 auto;
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 250, 247, 0.925);
+  border-radius: 50px;
+
+  box-shadow: 0 12px 30px rgba(116, 61, 73, 0.08);
+
+  position: relative;
+  z-index: 10;
+}
+
+
+/* Dentro da area do anfitrião */
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--tinta);
+  background: transparent;
+
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+
+/* Dentro da area do anfitrião */
+
+.marca img {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+}
+
+
+.acesso,
+.link-texto {
+  color: var(--tinta);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background: transparent;
+  border: 0;
+}
+
+
+.acesso {
+  font-family: 'DM Sans', serif;
+  font-style: normal;
+  font-weight: 600;
+
+  border: 0;
+  border-radius: 30px;
+
+  padding: 12px 22px;
+
+  background: var(--terracota);
+  color: rgb(255, 255, 255);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  white-space: nowrap;
+}
+
+
+#nome {
+  margin: 0;
+
+  font-family: 'Bodoni Moda', serif;
+  font-size: 19px;
+  font-weight: 400;
+
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+
+  color: var(--tinta);
+}
+
+
+.menu-topo {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+
+.menu-topo a {
+  color: #806d6d;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+
+.menu-topo a:hover {
+  color: var(--terracota);
+}
+
+
+/* SEÇÃO PRINCIPA*/
+
+.seção-principal{
+  max-width: 1050px;
+  min-height: 475px;
+  margin: 34px auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30p 4vw 70px;
+}
+
+.texto-destaque {
+  max-width: 520px;
+  animation: subir 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.texto-apoio,
+.rotulo {
+  color: var(--terracota);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.texto-apoio {
+  display: inline-flex;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.texto-destaque h1 {
+  font-size: clamp(56px, 7vw, 93px);
+  line-height: 0.82;
+}
+
+.texto-destaque h1 em {
+  color: var(--terracota);
+  display: block;
+}
+
+.data-destaque {
+  margin: 22px 0 18px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.data-destaque span {
+  color: var(--terracota);
+  margin: 0 8px;
+}
+
+.texto-introducao {
+  max-width: 365px;
+  color: #72585a;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.texto-acoes {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.botao {
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  transition: transform 0.16s, box-shadow 0.2s, background 0.2s;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.botao:active {
+  transform: scale(0.97);
+}
+
+.botao-principal {
+  background: var(--terracota);
+  color: #fff8f4;
+  padding: 14px 18px;
+  box-shadow: 0 8px 18px rgba(169, 95, 87, 0.2);
+}
+
+.botao-principal:hover {
+  background: #8f4e49;
+  box-shadow: 0 11px 22px rgba(169, 95, 87, 0.26);
+  transform: translateY(-2px);
+}
+
+.botao-secundario {
+  background: var(--papel);
+  color: var(--terracota);
+  border: 1px solid var(--terracota);
+  padding: 12px 15px;
+}
+
+.botao-secundario:hover {
+  background: var(--terracota);
+  color: white;
+}
+
