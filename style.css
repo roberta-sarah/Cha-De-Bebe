@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+/* Fontes usadas no site */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
-
+/* Cores principais usadas no site */
 :root {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #543d3a;
   background: #efb2c4;
-
   --tinta: #543d3a;
   --suave: #8e7474;
   --rosa: #efb2c4;
@@ -19,19 +17,19 @@
   --sombra: 0 18px 48px rgba(116, 61, 73, 0.12);
 }
 
-
+/* Faz o tamanho dos elementos incluir padding e borda */
 * {
   box-sizing: border-box;
 }
 
-
+/* Configura a página e remove o scroll horizontal */
 html {
   scroll-behavior: smooth;
   width: 100%;
   overflow-x: hidden;
 }
 
-
+/* Configura o corpo da página */
 body {
   margin: 0;
   min-width: 320px;
@@ -40,7 +38,7 @@ body {
   overflow-x: hidden;
 }
 
-
+/* Mantém a mesma fonte nos campos e botões */
 button,
 input,
 textarea,
@@ -48,183 +46,152 @@ select {
   font: inherit;
 }
 
-
+/* Mostra que botões e links são clicáveis */
 button,
 a {
   cursor: pointer;
 }
 
-
-/* usada no javascript */
-
+/* Usada pelo JavaScript para esconder elementos */
 .oculto {
   display: none !important;
-  /* Esconde o elemento da página e impede que outras regras o exibam */
+  /* Esconde o elemento da página */
 }
 
-
+/* Fundo geral do convite público */
 .esqueleto-site {
-  
   min-height: 100vh;
   width: 100%;
   background-color: var(--rosa);
-  background-image: url('imagens/fundo bebê.jpg');
+  background-image: url("imagens/fundo bebê.jpg");
   background-repeat: repeat;
-  background-size:800px auto;
+  background-size: 800px auto;
   background-position: center top;
   padding: 20px 28px 36px;
   overflow-x: hidden;
 }
 
-
-
+/* Barra superior com AYLA, menu e acesso do anfitrião */
 .barra-topo {
   width: 100%;
   max-width: 1150px;
   height: 70px;
-
   margin: 0 auto;
   padding: 0 32px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   background: rgba(255, 250, 247, 0.925);
   border-radius: 50px;
-
   box-shadow: 0 12px 30px rgba(116, 61, 73, 0.08);
-
   position: relative;
   z-index: 10;
 }
 
-
-/* Dentro da area do anfitrião */
-
+/* Logo usada na área do anfitrião */
 .marca {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-
   color: var(--tinta);
   background: transparent;
-
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 600;
   font-size: 22px;
   letter-spacing: -0.02em;
 }
 
-
-/* Dentro da area do anfitrião */
-
+/* Imagem da logo na área do anfitrião */
 .marca img {
   width: 29px;
   height: 29px;
   object-fit: contain;
 }
 
-
+/* Botão do anfitrião e link de contribuição */
 .acesso,
 .link-texto {
   color: var(--tinta);
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
-
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   background: transparent;
   border: 0;
 }
 
-
+/* Botão "Área do anfitrião" no topo */
 .acesso {
-  font-family: 'DM Sans', serif;
+  font-family: "DM Sans", serif;
   font-style: normal;
   font-weight: 600;
-
   border: 0;
   border-radius: 30px;
-
   padding: 12px 22px;
-
   background: var(--terracota);
   color: rgb(255, 255, 255);
-
   font-size: 14px;
-  font-weight: 600;
-
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   white-space: nowrap;
 }
 
-
+/* Nome AYLA no topo */
 #nome {
   margin: 0;
-
-  font-family: 'Bodoni Moda', serif;
+  font-family: "Bodoni Moda", serif;
   font-size: 19px;
   font-weight: 400;
-
   letter-spacing: 0.28em;
   text-transform: uppercase;
-
   color: var(--tinta);
 }
 
-
+/* Menu "Início" e "Recadinhos" */
 .menu-topo {
   position: absolute;
   left: 50%;
-
   transform: translateX(-50%);
-
   display: flex;
   align-items: center;
   gap: 50px;
 }
 
-
+/* Links do menu superior */
 .menu-topo a {
   color: #806d6d;
   text-decoration: none;
-
   font-size: 15px;
   font-weight: 500;
-
   transition: color 0.2s ease;
 }
 
-
+/* Cor do link quando passa o mouse */
 .menu-topo a:hover {
   color: var(--terracota);
 }
 
-
-/* SEÇÃO PRINCIPA*/
-
-.seção-principal{
+/* Seção principal do convite */
+.seção-principal {
   max-width: 900px;
   min-height: 475px;
   margin: 34px auto 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30p 4vw 70px;
+  padding: 30px 4vw 70px;
 }
 
+/* Bloco de texto da primeira tela */
 .texto-destaque {
   max-width: 520px;
   animation: subir 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
+/* Pequenos textos acima dos títulos */
 .texto-apoio,
 .rotulo {
   color: var(--terracota);
@@ -234,25 +201,29 @@ a {
   text-transform: uppercase;
 }
 
+/* Texto "uma celebração está chegando" */
 .texto-apoio {
   display: inline-flex;
   gap: 7px;
   margin-bottom: 18px;
 }
 
+/* Remove margens padrão dos títulos e parágrafos */
 h1,
 h2,
 p {
   margin: 0;
 }
 
+/* Fonte dos títulos */
 h1,
 h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   letter-spacing: -0.035em;
 }
 
+/* Título "Chá de bebê da Ayla" */
 .texto-destaque h1 {
   font-size: clamp(56px, 7vw, 93px);
   line-height: 0.82;
@@ -260,11 +231,13 @@ h2 {
   margin-right: 0%;
 }
 
+/* Destaca "da Ayla" */
 .texto-destaque h1 em {
   color: var(--terracota);
   display: block;
 }
 
+/* Data do evento, caso seja usada */
 .data-destaque {
   margin: 25px 0 18px;
   font-size: 12px;
@@ -273,11 +246,13 @@ h2 {
   text-transform: uppercase;
 }
 
+/* Cor dos detalhes da data */
 .data-destaque span {
   color: var(--terracota);
   margin: 0 8px;
 }
 
+/* Texto de introdução abaixo do título */
 .texto-introducao {
   max-width: 365px;
   color: #72585a;
@@ -285,6 +260,7 @@ h2 {
   font-size: 14px;
 }
 
+/* Área dos botões da primeira seção */
 .texto-acoes {
   display: flex;
   align-items: center;
@@ -292,6 +268,7 @@ h2 {
   margin-top: 80px;
 }
 
+/* Estilo geral dos botões */
 .botao {
   border: 0;
   cursor: pointer;
@@ -299,30 +276,36 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  transition: transform 0.16s, box-shadow 0.2s, background 0.2s;
+  transition:
+    transform 0.16s,
+    box-shadow 0.2s,
+    background 0.2s;
   font-size: 12px;
   font-weight: 700;
 }
 
+/* Efeito ao clicar */
 .botao:active {
   transform: scale(0.97);
 }
 
+/* Botão principal "Ver lista de presentes" */
 .botao-principal {
   background: var(--terracota);
   color: #fff8f4;
   padding: 14px 18px;
   box-shadow: 0 8px 18px rgba(169, 95, 87, 0.2);
   margin-bottom: 10px;
-  
 }
 
+/* Efeito do botão principal */
 .botao-principal:hover {
   background: #8f4e49;
   box-shadow: 0 11px 22px rgba(169, 95, 87, 0.26);
   transform: translateY(-2px);
 }
 
+/* Botão secundário da área do anfitrião */
 .botao-secundario {
   background: var(--papel);
   color: var(--terracota);
@@ -330,27 +313,29 @@ h2 {
   padding: 12px 15px;
 }
 
+/* Efeito do botão secundário */
 .botao-secundario:hover {
   background: var(--terracota);
   color: white;
 }
 
-.arte-destaque{
+/* Área da ilustração principal */
+.arte-destaque {
   width: 350px;
   position: relative;
   transform: rotate(3deg);
-
-   animation: entrada-flutuante 0.85s 0.12s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation: entrada-flutuante 0.85s 0.12s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
+/* Imagem do ursinho e flores */
 .arte-destaque > img {
   width: 100%;
   display: block;
   filter: drop-shadow(0 18px 18px rgba(110, 61, 73, 0.12));
-  
 }
 
-.selo{
+/* Selo sobre a ilustração */
+.selo {
   position: absolute;
   background: #f8dce0;
   width: 85px;
@@ -360,44 +345,48 @@ h2 {
   border-radius: 50%;
   padding: 7px;
   box-shadow: 0 8px 14px rgba(100, 50, 60, 0.13);
-
 }
 
+/* Imagem dentro do selo */
 .selo img {
- display: block;
- width: 100%;
- border-radius: 50px;
+  display: block;
+  width: 100%;
+  border-radius: 50px;
 }
 
 /* Lista de presentes */
-
 .conteudo {
   width: min(930px, 100%);
   margin: auto;
 }
 
-.cartao-papel{
+/* Fundo dos cartões de conteúdo */
+.cartao-papel {
   background: rgba(255, 250, 247, 0.96);
   box-shadow: var(--sombra);
   border: 1px solid rgba(255, 255, 255, 0.65);
 }
 
+/* Espaçamento dos cartões de presentes e contribuição */
 .secao-presentes,
 .cartao-contribuicao {
-  padding: clamp (23px, 4vw, 38px);
+  padding: clamp(23px, 4vw, 38px);
   position: relative;
   overflow: visible;
 }
 
+/* Inclinação do cartão de presentes */
 .papel-deslocado {
-transform: rotate(-0.35deg);
+  transform: rotate(-0.35deg);
 }
 
-.papel-deslocado-alternativo{
+/* Inclinação do cartão de contribuição */
+.papel-deslocado-alternativo {
   transform: rotate(0.3deg);
 }
 
-.selo-secao{
+/* Selo que fica em cima dos cartões */
+.selo-secao {
   position: absolute;
   width: 48px;
   height: 48px;
@@ -411,54 +400,62 @@ transform: rotate(-0.35deg);
   box-shadow: 0 6px 12px rgba(100, 50, 60, 0.12);
 }
 
-.selo-direita{
+/* Selo do cartão de contribuição */
+.selo-direita {
   right: auto;
   left: 28px;
   top: -21px;
   transform: rotate(-8deg);
 }
 
-.secao-presentes{
+/* Sobe o cartão da lista de presentes */
+.secao-presentes {
   margin-top: -15px;
 }
 
+/* Título da lista e título do painel do anfitrião */
 .secao-titulo,
-.titulo-painel{
+.titulo-painel {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 18px;
 }
 
-h2{
+/* Títulos das seções */
+h2 {
   font-size: 39px;
   line-height: 1;
   margin-top: 7px;
 }
 
-.contador{
+/* Contador da lista, preenchido pelo JavaScript */
+.contador {
   color: var(--terracota);
   font-size: 11px;
   margin-top: 4px;
 }
 
+/* Área onde o JavaScript coloca os presentes */
 .lista-presentes {
   margin-top: 28px;
   border-top: 1px dashed rgba(169, 95, 87, 0.28);
   position: relative;
 }
 
-.lista-presentes::before{
-  content: 'para o enxoval';
- position: absolute;
+/* Texto "para o enxoval" acima da linha */
+.lista-presentes::before {
+  content: "para o enxoval";
+  position: absolute;
   right: 0;
   top: -21px;
   color: var(--terracota);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-style: italic;
   font-size: 15px;
 }
 
+/* Cada presente criado pelo JavaScript */
 .linha-presente {
   display: flex;
   align-items: center;
@@ -467,6 +464,7 @@ h2{
   border-bottom: 1px solid var(--linha);
 }
 
+/* Ícone de cada presente criado pelo JavaScript */
 .icone-presente {
   width: 37px;
   height: 37px;
@@ -477,27 +475,32 @@ h2{
   background: #f8e2e3;
 }
 
+/* Informações do presente criadas pelo JavaScript */
 .informacoes-presente {
   flex: 1;
   display: grid;
   gap: 5px;
 }
 
+/* Nome do presente */
 .informacoes-presente strong {
   font-size: 13px;
 }
 
+/* Categoria ou informação secundária do presente */
 .informacoes-presente span {
   color: var(--suave);
-  font-size: 11px;}
+  font-size: 11px;
+}
 
-  .informacoes-presente i {
+/* Detalhes pequenos das informações do presente */
+.informacoes-presente i {
   color: var(--terracota);
   font-style: normal;
   margin: 0 4px;
 }
 
+/* Presente que já foi reservado */
 .reservado {
   opacity: 0.6;
 }
-
