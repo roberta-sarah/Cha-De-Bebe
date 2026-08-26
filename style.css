@@ -504,3 +504,20 @@ h2 {
 .reservado {
   opacity: 0.6;
 }
+/* JAVASCRIPT */
+.botao-pequeno {
+  background: #f3d8dc;
+  color: var(--terracota);
+  padding: 9px 12px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* CONTRIBUIÇÃO LIVRE */
+.cartao-contribuicao{
+  margin: 23px 0 0 12px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 45px;
+
+}
