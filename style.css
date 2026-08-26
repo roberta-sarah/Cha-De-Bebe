@@ -64,16 +64,24 @@ a {
 
 
 .esqueleto-site {
+  
   min-height: 100vh;
-  background: var(--rosa) url('imagens/fundo\ bebê.jpg');
+  width: 100%;
+  background-color: var(--rosa);
+  background-image: url('imagens/fundo bebê.jpg');
+  background-repeat: repeat;
+  background-size:800px auto;
+  background-position: center top;
   padding: 20px 28px 36px;
+  overflow-x: hidden;
 }
+
 
 
 .barra-topo {
   width: 100%;
-  max-width: 1295px;
-  height: 72px;
+  max-width: 1150px;
+  height: 70px;
 
   margin: 0 auto;
   padding: 0 32px;
@@ -203,7 +211,7 @@ a {
 /* SEÇÃO PRINCIPA*/
 
 .seção-principal{
-  max-width: 1050px;
+  max-width: 900px;
   min-height: 475px;
   margin: 34px auto 10px;
   display: flex;
@@ -248,6 +256,8 @@ h2 {
 .texto-destaque h1 {
   font-size: clamp(56px, 7vw, 93px);
   line-height: 0.82;
+  margin-bottom: 6%;
+  margin-right: 0%;
 }
 
 .texto-destaque h1 em {
@@ -256,7 +266,7 @@ h2 {
 }
 
 .data-destaque {
-  margin: 22px 0 18px;
+  margin: 25px 0 18px;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -279,7 +289,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 22px;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 .botao {
@@ -303,6 +313,8 @@ h2 {
   color: #fff8f4;
   padding: 14px 18px;
   box-shadow: 0 8px 18px rgba(169, 95, 87, 0.2);
+  margin-bottom: 10px;
+  
 }
 
 .botao-principal:hover {
@@ -321,5 +333,171 @@ h2 {
 .botao-secundario:hover {
   background: var(--terracota);
   color: white;
+}
+
+.arte-destaque{
+  width: 350px;
+  position: relative;
+  transform: rotate(3deg);
+
+   animation: entrada-flutuante 0.85s 0.12s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.arte-destaque > img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 18px 18px rgba(110, 61, 73, 0.12));
+  
+}
+
+.selo{
+  position: absolute;
+  background: #f8dce0;
+  width: 85px;
+  bottom: 30px;
+  left: -40px;
+  transform: rotate(-10deg);
+  border-radius: 50%;
+  padding: 7px;
+  box-shadow: 0 8px 14px rgba(100, 50, 60, 0.13);
+
+}
+
+.selo img {
+ display: block;
+ width: 100%;
+ border-radius: 50px;
+}
+
+/* Lista de presentes */
+
+.conteudo {
+  width: min(930px, 100%);
+  margin: auto;
+}
+
+.cartao-papel{
+  background: rgba(255, 250, 247, 0.96);
+  box-shadow: var(--sombra);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.secao-presentes,
+.cartao-contribuicao {
+  padding: clamp (23px, 4vw, 38px);
+  position: relative;
+  overflow: visible;
+}
+
+.papel-deslocado {
+transform: rotate(-0.35deg);
+}
+
+.papel-deslocado-alternativo{
+  transform: rotate(0.3deg);
+}
+
+.selo-secao{
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  right: 25px;
+  top: -23px;
+  border-radius: 50%;
+  background: #f8dce0;
+  padding: 4px;
+  transform: rotate(8deg);
+  box-shadow: 0 6px 12px rgba(100, 50, 60, 0.12);
+}
+
+.selo-direita{
+  right: auto;
+  left: 28px;
+  top: -21px;
+  transform: rotate(-8deg);
+}
+
+.secao-presentes{
+  margin-top: -15px;
+}
+
+.secao-titulo,
+.titulo-painel{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+h2{
+  font-size: 39px;
+  line-height: 1;
+  margin-top: 7px;
+}
+
+.contador{
+  color: var(--terracota);
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.lista-presentes {
+  margin-top: 28px;
+  border-top: 1px dashed rgba(169, 95, 87, 0.28);
+  position: relative;
+}
+
+.lista-presentes::before{
+  content: 'para o enxoval';
+ position: absolute;
+  right: 0;
+  top: -21px;
+  color: var(--terracota);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.linha-presente {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--linha);
+}
+
+.icone-presente {
+  width: 37px;
+  height: 37px;
+  flex: 0 0 37px;
+  display: grid;
+  place-items: center;
+  color: var(--terracota);
+  background: #f8e2e3;
+}
+
+.informacoes-presente {
+  flex: 1;
+  display: grid;
+  gap: 5px;
+}
+
+.informacoes-presente strong {
+  font-size: 13px;
+}
+
+.informacoes-presente span {
+  color: var(--suave);
+  font-size: 11px;}
+
+  .informacoes-presente i {
+  color: var(--terracota);
+  font-style: normal;
+  margin: 0 4px;
+}
+
+.reservado {
+  opacity: 0.6;
 }
 
