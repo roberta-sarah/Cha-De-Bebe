@@ -12,7 +12,7 @@
   --suave: #8e7474;
   --rosa: #efb2c4;
   --papel: #fffaf7;
-  --terracota: #a95f57;
+  --terracota:rgba(191, 85, 117);
   --linha: rgba(169, 95, 87, 0.18);
   --sombra: 0 18px 48px rgba(116, 61, 73, 0.12);
 }
@@ -176,12 +176,13 @@ a {
 
 /* Seção principal do convite */
 .seção-principal {
-  max-width: 900px;
+  max-width: 1050px;
   min-height: 475px;
   margin: 34px auto 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
   padding: 30px 4vw 70px;
 }
 
@@ -520,4 +521,89 @@ h2 {
   grid-template-columns: 0.8fr 1.2fr;
   gap: 45px;
 
+}
+
+.introducao-contribuicao{
+  color: var(--suave);
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 17px;
+  max-width: 255px;
+}
+
+.formulario-contribuicao{
+  display: grid;
+  gap:6px;
+}
+
+.linha-formulario{
+  display: grid;
+  grid-template-columns: 1fr 103px;
+  gap: 6px;
+}
+
+.formulario-contribuicao label,
+.modal label{
+  display: grid;
+  gap: 6px;
+
+}
+
+.formulario-contribuicao label > span,
+.modal label > span {
+  color: var(--suave);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.formulario-contribuicao small {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.formulario-contribuicao input,
+.formulario-contribuicao textarea,
+.modal input,
+.modal select {
+  width: 100%;
+  border: 1px solid rgba(169, 95, 87, 0.13);
+  background: #f7f4ef;
+  color: var(--tinta);
+  outline: 0;
+  padding: 11px 12px;
+  font-size: 12px;
+}
+
+.formulario-contribuicao input:focus,
+.formulario-contribuicao textarea:focus,
+.modal input:focus {
+  border-color: var(--terracota);
+}
+.formulario-contribuicao textarea {
+  resize: vertical;
+}
+
+
+/* rodapé da página */
+.rodape{
+  border-top: 1px dashed rgba(169, 95, 87, 0.25);
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  color: rgba(84, 61, 58, 0.7);
+  font-size: 11px;
+  padding: 24px 2px 0;
+}
+
+/* estilização do botão do rodapé */
+.rodape button{
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font-size: 11px;
 }
