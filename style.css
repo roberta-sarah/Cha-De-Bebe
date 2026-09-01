@@ -9,7 +9,7 @@
   color: #543d3a;
   background: #efb2c4;
   --tinta: #543d3a;
-  --suave: #8e7474;
+  --suave: #362e2ef1;
   --rosa: #efb2c4;
   --papel: #fffaf7;
   --terracota:rgba(191, 85, 117);
@@ -294,7 +294,7 @@ h2 {
 .botao-principal {
   background: var(--terracota);
   color: #fff8f4;
-  padding: 14px 18px;
+  padding: 11px 16px;
   box-shadow: 0 8px 18px rgba(169, 95, 87, 0.2);
   margin-bottom: 10px;
 }
@@ -379,11 +379,6 @@ h2 {
 /* Inclinação do cartão de presentes */
 .papel-deslocado {
   transform: rotate(-0.35deg);
-}
-
-/* Inclinação do cartão de contribuição */
-.papel-deslocado-alternativo {
-  transform: rotate(0.3deg);
 }
 
 /* Selo que fica em cima dos cartões */
@@ -516,11 +511,11 @@ h2 {
 
 /* CONTRIBUIÇÃO LIVRE */
 .cartao-contribuicao{
-  margin: 23px 0 0 12px;
+  margin: 23px 0 0 0px;
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: 45px;
-
+  align-items: start;
 }
 
 .introducao-contribuicao{
@@ -528,12 +523,19 @@ h2 {
   font-size: 13px;
   line-height: 1.7;
   margin-top: 17px;
-  max-width: 255px;
+  max-width: 300px;
+}
+
+.introducao-contribuicao h2 {
+  font-size: 31px; 
+  margin-bottom: 15px;
 }
 
 .formulario-contribuicao{
   display: grid;
-  gap:6px;
+  gap:14px;
+  align-content: start;
+  margin-top: 30px;
 }
 
 .linha-formulario{
@@ -584,6 +586,123 @@ h2 {
 }
 .formulario-contribuicao textarea {
   resize: vertical;
+  min-height: 70px;
+}
+
+/* BLOCO PIX */
+.bloco-pix {
+  margin-top: 20px;
+}
+
+.bloco-pix > span {
+  color: var(--suave);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.campo-pix {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid var(--linha);
+  border-radius: 8px; 
+  background: var(--papel); 
+  padding: 13px 14px;
+}
+
+.campo-pix strong {
+  font-size: 13px;
+  color: var(--tinta);
+  font-weight: 500; 
+  word-break: break-all;
+}
+
+.campo-pix .botao-pequeno {
+  flex: none;
+}
+
+/* MURAL DE COMENTÁRIOS */
+
+.secao-recados{
+  margin-top: 22px;
+}
+
+.grade-recados{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.cartao-recado {
+  background: var(--papel);
+  border: 1px solid var(--linha);
+  border-radius: 4px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cartao-recado .aspas {
+  font-family: "Bodoni Moda", serif;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--terracota);
+}
+
+.mensagem-recado {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--tinta);
+  flex: 1;
+}
+
+.autor-recado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-recado {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 50%;
+  background: #f8dce0;
+  color: var(--terracota);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.autor-recado strong {
+  display: block;
+  font-size: 12px;
+  color: var(--tinta);
+}
+
+.autor-recado span {
+  display: block;
+  font-size: 11px;
+  color: var(--terracota);
+  font-weight: 600;
+}
+
+.sem-recados {
+  color: var(--suave);
+  font-size: 13px;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 20px 0;
 }
 
 
