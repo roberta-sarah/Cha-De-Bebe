@@ -14,12 +14,12 @@
     <div id="visualizacao" class="esqueleto-site">
       <header class="barra-topo">
         <p id="nome">AYLA</p>
-         <nav class="menu-topo">
-    <a href="#inicio">Início</a>
-    <a href="#recadinhos">Recadinhos</a>
-  </nav>
+        <nav class="menu-topo">
+          <a href="#inicio">Início</a>
+          <a href="#recadinhos">Recadinhos</a>
+        </nav>
         <button class="acesso" data-action="abrir-login">
-           🔒 Área do anfitrião
+          🔒 Área do anfitrião
         </button>
       </header>
 
@@ -33,11 +33,13 @@
 
             <p class="texto-introducao">
               Um cantinho para celebrar a chegada da nossa pequena. Se quiser,
-              escolha um presente ou deixe um carinho em forma de contribuição.
+              escolha um presente ou deixe uma contribuição de qualquer valor.
             </p>
 
             <div class="texto-acoes">
-              <a href="#presentes" class="botao botao-principal"> Ver lista de presentes <span>→</span></a>
+              <a href="#presentes" class="botao botao-principal">
+                Ver lista de presentes <span>→</span></a
+              >
 
               <a href="#contribuir" class="link-texto"> Contribuição livre </a>
             </div>
@@ -46,22 +48,21 @@
           <div class="arte-destaque">
             <img
               src="imagens/cha-bebe-ilustracao-recorte.png"
-              alt="Ilustração de um ursinho entre flores" />
+              alt="Ilustração de um ursinho entre flores"
+            />
 
             <div class="selo">
               <img
                 src="imagens/cha-bebe-selo-recorte.png"
-                alt="Selo do chá de bebê" />
+                alt="Selo do chá de bebê"
+              />
             </div>
           </div>
         </section>
 
         <!-- LISTA DE PRESENTES -->
         <div class="conteudo">
-          <section
-            class="cartao-papel secao-presentes papel-deslocado"
-            id="presentes"
-          >
+          <section class="cartao-papel secao-presentes" id="presentes">
             <img
               class="selo-secao"
               src="imagens/cha-bebe-selo-recorte.png"
@@ -70,9 +71,9 @@
 
             <div class="secao-titulo">
               <div>
-                <span class="rotulo">cartão de presentes</span>
+                <span class="rotulo">lista de presentes</span>
 
-                <h2>Um carinho de cada vez</h2>
+                <h2>Carinho em forma de presente</h2>
               </div>
 
               <span class="contador" id="contador-presentes"></span>
@@ -98,39 +99,38 @@
               <h2>Faça parte desse momento</h2>
 
               <p>
-                Qualquer valor ajuda a completar o cantinho da Ayla. Deixe
-                também uma palavrinha para ela guardar quando crescer.
+                Qualquer valor ajuda a completar o cantinho da Ayla. Copie a chave PIX
+                e deixe uma mensagem para a Ayla guardar.
               </p>
+
+              <div class="bloco-pix">
+                <div class="campo-pix">
+                  <strong id="chave-pix">exemplo@email.com</strong>
+                  <button
+                    type="button"
+                    class="botao botao-pequeno"
+                    id="botao-copiar-pix"
+                  >
+                    copiar
+                  </button>
+                </div>
+              </div>
             </div>
 
             <form class="formulario-contribuicao" id="formulario-contribuicao">
-              <div class="linha-formulario">
-                <label>
-                  <span>seu nome</span>
+              <label>
+                <span>seu nome</span>
 
-                  <input
-                    name="name"
-                    required
-                    placeholder="Como podemos te chamar?"
-                  />
-                </label>
-
-                <label class="campo-valor">
-                  <span>valor (R$)</span>
-
-                  <input
-                    name="value"
-                    type="number"
-                    min="1"
-                    required
-                    placeholder="0,00"
-                  />
-                </label>
-              </div>
+                <input
+                  name="name"
+                  required
+                  placeholder="Como podemos te chamar?"
+                />
+              </label>
 
               <label>
                 <span>
-                  mensagem para o bebê
+                  mensagem 
                   <small>(opcional)</small>
                 </span>
 
@@ -142,9 +142,31 @@
               </label>
 
               <button class="botao botao-principal" type="submit">
-                Contribuir ✦
+                Deixar recadinho ✦
               </button>
             </form>
+          </section>
+
+          <!--COMENTÁRIOS-->
+
+          <section
+            class="cartao-papel secao-recados papel-deslocado"
+            id="recadinhos"
+          >
+            <img
+              class="selo-secao"
+              src="imagens/cha-bebe-selo-recorte.png"
+              alt=""
+            />
+
+            <div class="secao-titulo">
+              <div>
+                <span class="rotulo">mural da ayla</span>
+                <h2>Recadinhos para a Ayla</h2>
+              </div>
+            </div>
+
+            <div class="grade-recados" id="lista-recados"></div>
           </section>
 
           <!-- RODAPÉ -->
@@ -172,7 +194,7 @@
           <div class="avatar">AC</div>
 
           <div>
-            <strong>Ana & Caio</strong>
+            <strong>João</strong>
             <span>anfitriões</span>
           </div>
         </div>
@@ -201,46 +223,21 @@
 
             <h1>Área do anfitrião</h1>
 
-            <p>Deixe tudo pronto para celebrar a chegada da Ayla.</p>
+            <p>Presentinhos da Ayla.</p>
           </div>
 
-          <button class="botao botao-secundario" data-action="copiar-link">
-            ⌯ compartilhar convite
-          </button>
+         
         </header>
 
         <!-- ESTATÍSTICAS -->
-        <div class="grade-estatisticas">
-          <div class="cartao-estatistica">
-            <span>presentes cadastrados</span>
+     
 
-            <strong id="total-estatistica">0</strong>
-
-            <small>🎁 itens na lista</small>
-          </div>
-
-          <div class="cartao-estatistica">
-            <span>já reservados</span>
-
-            <strong id="reservados-estatistica">0</strong>
-
-            <small id="progresso-estatistica"> 0% da lista </small>
-          </div>
-
-          <div class="cartao-estatistica">
-            <span>valor estimado</span>
-
-            <strong id="valor-estatistica"> R$ 0,00 </strong>
-
-            <small> baseado na lista atual </small>
-          </div>
-        </div>
 
         <!-- PAINEL DE PRESENTES -->
         <section class="painel-anfitriao">
           <div class="titulo-painel">
             <div>
-              <span class="rotulo"> lista de presentes · com carinho </span>
+              <span class="rotulo"> lista de presentes </span>
 
               <h2>Organize os itens do enxoval</h2>
             </div>
@@ -283,6 +280,10 @@
 
     <!-- NOTIFICAÇÃO -->
     <div id="aviso" class="aviso"></div>
+
+    <!-- Firebase (banco de dados compartilhado) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 
     <script src="script.js"></script>
   </body>
