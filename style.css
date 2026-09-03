@@ -377,10 +377,6 @@ h2 {
   overflow: visible;
 }
 
-/* Inclinação do cartão de presentes */
-.papel-deslocado {
-  transform: rotate(-0.35deg);
-}
 
 /* Selo que fica em cima dos cartões */
 .selo-secao {
@@ -729,8 +725,7 @@ h2 {
 }
 
 /* ======================================================
-   A partir daqui: estilos adicionados para o JavaScript
-   (essas classes já existiam no HTML mas ainda não tinham CSS)
+  JAVASCRIPT
    ====================================================== */
 
 /* Presente marcado como "já vou levar": deixa o botão com outra cor */
